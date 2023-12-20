@@ -15,7 +15,9 @@
         "laminas/laminas-development-mode": "^3.10",
         "laminas/laminas-skeleton-installer": "^1.2",
         "laminas/laminas-mvc": "^3.6.0",
-        "laminas/laminas-db": "^2.18"
+        "laminas/laminas-db": "^2.18",
+        "laminas/laminas-form": "^3.17",
+        "laminas/laminas-modulemanager": "^2.15"
     },
     "autoload": {
         "psr-4": {

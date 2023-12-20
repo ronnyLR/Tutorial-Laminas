@@ -2,6 +2,7 @@
 
 namespace Album\Model;
 
+use Album\Model\Album;
 use RuntimeException;
 use Laminas\Db\TableGateway\TableGatewayInterface;
 
