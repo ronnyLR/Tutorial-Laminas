@@ -5,6 +5,14 @@ $title = 'My albums';
 $this->headTitle($title);
 ?>
 <h1><?= $this->escapeHtml($title) ?></h1>
+
+<!-- Adiciona a barra de pesquisa -->
+<form action="<?= $this->url('album', ['action' => 'index']) ?>" method="get">
+    <label for="search">Search by Title:</label>
+    <input type="text" id="search" name="q" placeholder="Enter title">
+    <button type="submit">Search</button>
+</form>
+
 <p>
     <a href="<?= $this->url('album', ['action' => 'add']) ?>">Add new album</a>
 </p>

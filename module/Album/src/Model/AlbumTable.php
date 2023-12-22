@@ -16,10 +16,23 @@ class AlbumTable
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
+    // No seu modelo (AlbumTable.php)
+public function fetchAll($searchTerm = '')
+{
+    $select = $this->tableGateway->getSql()->select();
+    if (!empty($searchTerm)) {
+        $select->where->like('title', '%' . $searchTerm . '%');
+    }
+    $resultSet = $this->tableGateway->selectWith($select);
+
+    return $resultSet;
+}
+
+
+    /*public function fetchAll()
     {
         return $this->tableGateway->select();
-    }
+    }*/
 
     public function getAlbum($id)
     {
